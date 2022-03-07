@@ -16,7 +16,7 @@ const loggingOut = () => {
 
 
 <template>
-   <div class="bg-pink-300 text-gray-500">
+   <div class="bg-green-800 text-yellow-300">
         <div class="container mx-auto flex items-center italic justify-between ">
             <h1 class="tracking-tighter text-3xl font-semibold">
                 Vue<span class="font-normal">RealAuth</span>
@@ -24,24 +24,24 @@ const loggingOut = () => {
             <nav>
                 <ul class="flex space-x-4">
                     <router-link to="/">
-                    <li class="py-8 px-4  hover:cursor-pointer hover:bg-gray-500 hover:text-pink-300">
+                    <li class="py-8 px-4  hover:cursor-pointer hover:bg-yellow-300 hover:text-green-800">
                         Home
                         </li></router-link>
                      <router-link to="/about">   
-                    <li class="py-8 px-4 hover:cursor-pointer hover:bg-gray-500 hover:text-pink-300">About</li>
+                    <li class="py-8 px-4 hover:cursor-pointer hover:bg-yellow-300 hover:text-green-800">About</li>
                     </router-link>
                     <router-link v-if="!isAuthenticated" to="/login">
-                    <li class="py-8 px-4 hover:cursor-pointer hover:bg-gray-500 hover:text-pink-300">Login</li>
+                    <li class="py-8 px-4 hover:cursor-pointer hover:bg-yellow-300 hover:text-green-800">Login</li>
                     </router-link>
 
                     <div v-else class="flex">
                      <router-link  to="/secret">
-                    <li class="py-8 px-4 hover:cursor-pointer hover:bg-gray-500 hover:text-pink-300">Secret</li>
+                    <li class="py-8 px-4 hover:cursor-pointer hover:bg-yellow-300 hover:text-green-800">Secret</li>
                     </router-link>
 
 
                      <button  @click="loggingOut">
-                    <li class="py-8 px-4 hover:cursor-pointer hover:bg-gray-500 hover:text-pink-300">Logout</li>
+                    <li class="py-8 px-4 hover:cursor-pointer hover:bg-yellow-300 hover:text-green-800">Logout</li>
                     </button>
                     </div>
                     
