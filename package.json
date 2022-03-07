@@ -1,5 +1,5 @@
 {
-  "name": "vuefakeauth",
+  "name": "vueloginauth",
   "private": true,
   "version": "0.0.0",
   "scripts": {
