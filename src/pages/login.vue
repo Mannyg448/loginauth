@@ -5,7 +5,7 @@ import useAuth from "../composable/useAuth";
 import useError from "../composable/useError";
 
 
-const { isAuthenticated, login, signup } = useAuth();
+const { isAuthenticated, login, signup, googleLogin } = useAuth();
 const username = ref("");
 const password = ref("");
 
@@ -21,6 +21,10 @@ const signingUp = async () => {
     goToHome();
 };
 
+const google = async () => {
+    await googleLogin();
+    goToHome();
+};
 const goToHome = () => {
     if (isAuthenticated.value) {
         router.push("/");
@@ -53,6 +57,11 @@ const { ready, start } = useTimeout(3000, { controls: true });
 
     <button  @click="signingUp" class="bg-green-800 rounded-lg w-1/2 text-yellow-400 py-2">Signup</button>
     </div>
+
+<button 
+    @click="google"
+    class="bg-white flex justify-center py-2 rounded-lg hover:bg-green-400"> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"></button>
 </form>
 </div>
 <div
